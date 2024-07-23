@@ -66,8 +66,8 @@ app.use("/", (req, res) => {
             EndPoint: "api/mentor/assignedstudents/mentorId",
             Method: "GET",
         },
-        "Show previously": {
-            EndPoint: "api/mentor/assignedstudents/mentorId",
+        "Show previously assigned mentor for student": {
+            EndPoint: "api/mentor/showpreviousmentor/studentId",
             Method: "GET",
         }
     })
