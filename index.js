@@ -67,7 +67,7 @@ app.get("/", (req, res) => {
             Method: "GET",
         },
         "Show previously assigned mentor for student": {
-            EndPoint: "api/mentor/showpreviousmentor/studentId",
+            EndPoint: "api/student/showpreviousmentor/studentId",
             Method: "GET",
         }
     })
