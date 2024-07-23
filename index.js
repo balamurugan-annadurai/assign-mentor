@@ -48,10 +48,10 @@ app.get("/", (req, res) => {
             Body: {
                 message: "Feilds to give in body",
                 Example: {
-                    "mentorId": "669f4d39f89fbeb9c7592982",
+                    "mentorId": "669f6c721203d30714e1dd9b",
                     "studentsId": [
-                        "669f4d44f89fbeb9c7592985",
-                        "669f4d52f89fbeb9c7592989"
+                        "669f6cf41203d30714e1dda1",
+                        "669f6d391203d30714e1dda5"
                     ]
                 }
             }
@@ -62,8 +62,8 @@ app.get("/", (req, res) => {
             Body: {
                 message: "Feilds to give in body",
                 Example: {
-                    "mentorId": "669f4d28f89fbeb9c759297e",
-                    "studentId": "669f4d52f89fbeb9c7592989"
+                    "mentorId": "669f6ca11203d30714e1dd9e",
+                    "studentId": "669f6cf41203d30714e1dda1"
                 }
             }
         },
