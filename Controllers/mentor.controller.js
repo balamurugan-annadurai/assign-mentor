@@ -3,6 +3,7 @@ import Students from '../Models/student.schema.js';
 import Mentors from './../Models/mentor.schema.js';
 
 
+// Controller function to create a new mentor
 export const createMentor = async (req, res) => {
     const { name, email } = req.body;
     try {
@@ -22,6 +23,7 @@ export const createMentor = async (req, res) => {
     }
 }
 
+// Controller function to show all students assigned to a mentor
 export const showAllStudents = async (req, res) => {
     try {
         const mentorId = req.params.id;

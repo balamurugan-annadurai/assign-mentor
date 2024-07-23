@@ -1,17 +1,22 @@
+// Import required modules
 import express from "express";
 import cors from "cors";
 import dotenv from "dotenv";
 import connectDB from "./Database/dbConfig.js";
 import mentorRoutes from "./Routers/mentor.router.js";
 import studentRoutes from "./Routers/student.router.js";
-dotenv.config();
 
-const app = express();
-app.use(cors());
-app.use(express.json())
+dotenv.config(); // Initialize dotenv to load environment variables
 
-app.use("/api/mentor", mentorRoutes);
-app.use("/api/student", studentRoutes);
+const app = express(); // Create Express application instance
+app.use(cors()); // Enable CORS for all routes
+app.use(express.json()) // Middleware to parse JSON request bodies
+
+app.use("/api/mentor", mentorRoutes);  // Mentor API routes
+
+app.use("/api/student", studentRoutes);  // Student API routes
+
+// Define root endpoint with API documentation
 app.get("/", (req, res) => {
     res.status(200).json({
         Message: "Student and Mentor Assigning API",
@@ -73,8 +78,9 @@ app.get("/", (req, res) => {
     })
 })
 
-connectDB();
+connectDB();  // Connect to MongoDB database
 
+// Start server and log port number
 app.listen(process.env.PORT, () => {
     console.log("App is listening on PORT", process.env.PORT);
 })

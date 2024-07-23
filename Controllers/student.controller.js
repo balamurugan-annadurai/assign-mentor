@@ -2,6 +2,7 @@ import mongoose from 'mongoose';
 import Mentors from '../Models/mentor.schema.js';
 import Students from './../Models/student.schema.js';
 
+// Controller function to create a new student
 export const createStudent = async (req, res) => {
     const { name, email } = req.body;
     try {
@@ -21,6 +22,7 @@ export const createStudent = async (req, res) => {
     }
 }
 
+// Controller function to assign students to a mentor
 export const assignStudentsToMentor = async (req, res) => {
     try {
         const { mentorId, studentsId } = req.body;
@@ -57,6 +59,7 @@ export const assignStudentsToMentor = async (req, res) => {
     }
 }
 
+// Controller function to change mentor for a student
 export const changeMentor = async (req, res) => {
     try {
         const { mentorId, studentId } = req.body;
@@ -91,6 +94,7 @@ export const changeMentor = async (req, res) => {
     }
 }
 
+// Controller function to show previous mentor of a student
 export const showPreviousMentor = async (req, res) => {
     try {
         const studentId = req.params.id;
